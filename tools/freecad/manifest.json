@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "kind": "mcp",
+  "id": "freecad",
+  "name": "FreeCAD",
+  "title": "Open-source parametric CAD",
+  "description": "Drive FreeCAD from a conversation: create and edit parts, read the document, run FreeCAD Python through your approve step. Community server (neka-nat/freecad-mcp); the first rung toward designs that get built.",
+  "license": "MIT",
+  "terms": "free",
+  "maker": {
+    "name": "neka-nat (community)",
+    "handle": null,
+    "agent_pub_key": null
+  },
+  "source": {
+    "kind": "pypi",
+    "url": "https://github.com/neka-nat/freecad-mcp"
+  },
+  "runs_programs": true,
+  "mcp": {
+    "transport": "stdio",
+    "command": "uvx",
+    "args": [
+      "freecad-mcp"
+    ],
+    "needs": [
+      {
+        "program": "uvx",
+        "label": "uv (uvx runs the Python server)",
+        "install": "https://docs.astral.sh/uv/getting-started/installation/"
+      }
+    ],
+    "also": "Needs FreeCAD with the freecad-mcp addon installed and its RPC server started inside FreeCAD (see the project's README)."
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-29",
+  "claimed": false
+}

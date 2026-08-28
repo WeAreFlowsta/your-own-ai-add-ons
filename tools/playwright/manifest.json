@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "kind": "mcp",
+  "id": "playwright",
+  "name": "Playwright",
+  "title": "A browser the AI can drive",
+  "description": "Microsoft's official Playwright MCP server: the AI opens pages, reads them, fills forms and clicks, using a real browser on your computer. The most-used MCP server there is. Every step goes through your approve step.",
+  "license": "Apache-2.0",
+  "terms": "free",
+  "maker": {
+    "name": "Microsoft (Playwright)",
+    "handle": null,
+    "agent_pub_key": null
+  },
+  "source": {
+    "kind": "npm",
+    "url": "https://github.com/microsoft/playwright-mcp"
+  },
+  "runs_programs": true,
+  "mcp": {
+    "transport": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@playwright/mcp@latest"
+    ],
+    "needs": [
+      {
+        "program": "npx",
+        "label": "Node.js (npx runs the server)",
+        "install": "https://nodejs.org/en/download"
+      }
+    ],
+    "also": "The first run downloads the server package and a browser build; the AI's browsing shows as steps you approve."
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-29",
+  "claimed": false
+}

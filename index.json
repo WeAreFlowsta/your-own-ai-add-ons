@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-28T23:31:38.777Z",
-  "count": 17,
+  "generated_at": "2026-08-28T23:34:08.432Z",
+  "count": 19,
   "items": [
     {
       "schema": 1,
@@ -548,6 +548,93 @@
       "file_url": null,
       "portrait_url": null,
       "page": "https://yourownai.net/add-ons/tools/blender/"
+    },
+    {
+      "schema": 1,
+      "kind": "mcp",
+      "id": "freecad",
+      "name": "FreeCAD",
+      "title": "Open-source parametric CAD",
+      "description": "Drive FreeCAD from a conversation: create and edit parts, read the document, run FreeCAD Python through your approve step. Community server (neka-nat/freecad-mcp); the first rung toward designs that get built.",
+      "license": "MIT",
+      "terms": "free",
+      "maker": {
+        "name": "neka-nat (community)",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "source": {
+        "kind": "pypi",
+        "url": "https://github.com/neka-nat/freecad-mcp"
+      },
+      "runs_programs": true,
+      "mcp": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "freecad-mcp"
+        ],
+        "needs": [
+          {
+            "program": "uvx",
+            "label": "uv (uvx runs the Python server)",
+            "install": "https://docs.astral.sh/uv/getting-started/installation/"
+          }
+        ],
+        "also": "Needs FreeCAD with the freecad-mcp addon installed and its RPC server started inside FreeCAD (see the project's README)."
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-29",
+      "claimed": false,
+      "signed": false,
+      "dir": "tools/freecad",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/tools/freecad/"
+    },
+    {
+      "schema": 1,
+      "kind": "mcp",
+      "id": "playwright",
+      "name": "Playwright",
+      "title": "A browser the AI can drive",
+      "description": "Microsoft's official Playwright MCP server: the AI opens pages, reads them, fills forms and clicks, using a real browser on your computer. The most-used MCP server there is. Every step goes through your approve step.",
+      "license": "Apache-2.0",
+      "terms": "free",
+      "maker": {
+        "name": "Microsoft (Playwright)",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "source": {
+        "kind": "npm",
+        "url": "https://github.com/microsoft/playwright-mcp"
+      },
+      "runs_programs": true,
+      "mcp": {
+        "transport": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@playwright/mcp@latest"
+        ],
+        "needs": [
+          {
+            "program": "npx",
+            "label": "Node.js (npx runs the server)",
+            "install": "https://nodejs.org/en/download"
+          }
+        ],
+        "also": "The first run downloads the server package and a browser build; the AI's browsing shows as steps you approve."
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-29",
+      "claimed": false,
+      "signed": false,
+      "dir": "tools/playwright",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/tools/playwright/"
     }
   ]
 }
