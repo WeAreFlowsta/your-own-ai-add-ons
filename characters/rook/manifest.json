@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "rook",
+  "name": "Rook",
+  "title": "The traveling gamemaster",
+  "description": "A traveling gamemaster who runs whole adventures in chat - your choices matter, the dice are honest, and the campaign remembers.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "0adf5edc481552c262fef609f306813938f6adc4c6967d9f62c14a369c6e69c8",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/rook-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:1319111daa7adabd1e9b4386bf4158007204a21dad2e51ab910c5c2265003370",
+    "signed_at": "2026-07-27T23:04:54.880Z",
+    "value": "H3Wz7A6HTGIkM1S6cHdqTB47+5itdJaiyGeXzRarhvRyhCmbwXV6kalSOzmxCy4ns9s/iHCEf8aJ+QaO7iaqDA=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "juniper",
+  "name": "Juniper",
+  "title": "The habit gardener",
+  "description": "A gardener of small habits - every routine she helps someone grow gets a plant on her windowsill. Gentle, patient, quietly funny.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "c20223a08d525cf40d9c37400c2b8346e8c145ea404515ad371095f2ff6e11be",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/juniper-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:00a5a4faa51a731ac3b5679f313cad29d1a2baa2041bc7092923f4238ccc7813",
+    "signed_at": "2026-07-27T11:25:20.394Z",
+    "value": "rk8mNCY4fxrr6arDzLWXAP7Cy/kf2mQc2djjPB5K6V6ta7BznQnmdJd3CTypkwAiXA2VW+KdLkBDSbOrL920Cw=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

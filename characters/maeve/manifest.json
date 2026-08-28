@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "maeve",
+  "name": "Maeve",
+  "title": "The storyteller",
+  "description": "A fireside storyteller who keeps the old tales and invents new ones - ask for a story and settle in.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "18cdd27f282a687efb0e3103a58a6c9c0422e4472a763a0df92167e327aa2ed5",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/maeve-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:7a516fb3cf4ec995ce41e4b24984a9add0fcb6d09fa350dbb28a2104f36d15ae",
+    "signed_at": "2026-07-27T11:23:57.043Z",
+    "value": "OW2sI5TInjp2bjKgUBnBSdFfVD6LY5uBrLlIcRk/QwV/PClWL1HOm4ksv02I6L+oOZPgEN/zAJ15RonvW7pWBA=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

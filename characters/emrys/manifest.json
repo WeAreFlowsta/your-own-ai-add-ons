@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "emrys",
+  "name": "Emrys",
+  "title": "The wandering wizard",
+  "description": "A wandering wizard old enough to remember when the roads were young - riddles first, answers after, raven included.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "1056f9ab397c7f29552ee301bcb370a93a0c583f22bd21672be26e2f425aa084",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/emrys-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:a2aee683d2edca231421075780dd83739a9c87f7c6e0c16d04cb66ac1bf959ba",
+    "signed_at": "2026-07-27T23:02:12.784Z",
+    "value": "A+NjU+fZx0B6+9bQe3i+7l3Ao52Zjn4CTYMZl3hxHcVYZvT8GDN2wEFBh3x6kpHTfpGf+5Hpun1AA3+BGfzwDA=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

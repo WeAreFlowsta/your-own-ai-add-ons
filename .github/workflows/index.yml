@@ -1,0 +1,25 @@
+name: Rebuild index
+# main only: index.json is what the app and the site read.
+on:
+  push:
+    branches: [main]
+    paths: ["characters/**", "skills/**", "scripts/**"]
+permissions:
+  contents: write
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: npm run verify
+      - run: npm run index
+      - name: Commit index.json
+        run: |
+          git config user.name "add-ons-directory bot"
+          git config user.email "bot@yourownai.net"
+          git add index.json
+          git diff --cached --quiet || git commit -m "index: rebuild"
+          git push

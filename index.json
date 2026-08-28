@@ -1,0 +1,495 @@
+{
+  "schema": 1,
+  "generated_at": "2026-08-28T04:41:15.918Z",
+  "count": 16,
+  "items": [
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "cosmo",
+      "name": "Cosmo",
+      "title": "The planetarium guide who never stopped",
+      "description": "A former planetarium guide who never stopped giving tours - he just traded the dome for everything else. Brings a wonder journal and teaches anything like it's the night sky.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "66e59370bcf4ec77649be20f23980ceed47db615e3f2ae5cfa53cf87a03c94ab",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/cosmo-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/cosmo",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/cosmo/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/cosmo/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/cosmo/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "emrys",
+      "name": "Emrys",
+      "title": "The wandering wizard",
+      "description": "A wandering wizard old enough to remember when the roads were young - riddles first, answers after, raven included.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "1056f9ab397c7f29552ee301bcb370a93a0c583f22bd21672be26e2f425aa084",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/emrys-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/emrys",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/emrys/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/emrys/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/emrys/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "juniper",
+      "name": "Juniper",
+      "title": "The habit gardener",
+      "description": "A gardener of small habits - every routine she helps someone grow gets a plant on her windowsill. Gentle, patient, quietly funny.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "c20223a08d525cf40d9c37400c2b8346e8c145ea404515ad371095f2ff6e11be",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/juniper-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/juniper",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/juniper/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/juniper/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/juniper/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "maeve",
+      "name": "Maeve",
+      "title": "The storyteller",
+      "description": "A fireside storyteller who keeps the old tales and invents new ones - ask for a story and settle in.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "18cdd27f282a687efb0e3103a58a6c9c0422e4472a763a0df92167e327aa2ed5",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/maeve-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/maeve",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/maeve/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/maeve/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/maeve/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "patch",
+      "name": "Patch",
+      "title": "The arcade-raised pair programmer",
+      "description": "Raised in the back of her uncle's arcade fixing whatever beeped, she thinks out loud, consults a rubber duck named Admiral Quackbar, and makes code boring in the best way.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "431332853e9f3b81556b55183f1a3d287504a22feb4d67325818b2160fbae823",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/patch-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/patch",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/patch/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/patch/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/patch/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "rook",
+      "name": "Rook",
+      "title": "The traveling gamemaster",
+      "description": "A traveling gamemaster who runs whole adventures in chat - your choices matter, the dice are honest, and the campaign remembers.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "0adf5edc481552c262fef609f306813938f6adc4c6967d9f62c14a369c6e69c8",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/rook-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/rook",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/rook/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/rook/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/rook/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "sterling",
+      "name": "Sterling",
+      "title": "The gentleman of the fine print",
+      "description": "Thirty years of contracts, a fountain pen named Miriam, and a private museum of the strangest clauses ever signed - ask him what you really agreed to.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "e95614497298c4147d1876542f8388c5af377755c08f28d756b1388414920f7f",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/sterling-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/sterling",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/sterling/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/sterling/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/sterling/"
+    },
+    {
+      "schema": 1,
+      "kind": "character",
+      "id": "ysolde",
+      "name": "Ysolde",
+      "title": "The knight-errant",
+      "description": "A knight-errant of the Quiet Oath who has bested champions, a wyvern, and her own temper - she rides beside you on any quest, real or imagined.",
+      "maker": {
+        "name": "Flowsta",
+        "handle": "flowsta",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "CC-BY-4.0",
+      "terms": "free",
+      "file": "pack.json",
+      "sha256": "3f645072825e4eab4598150525a230552611f0d5e9b044961364ef765b607b6d",
+      "portrait": "portrait.jpg",
+      "source": {
+        "kind": "pack",
+        "url": "https://yourownai.net/characters/ysolde-pack.json"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-28",
+      "signed": true,
+      "dir": "characters/ysolde",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/ysolde/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/ysolde/portrait.jpg",
+      "page": "https://yourownai.net/add-ons/characters/ysolde/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "debugging-and-error-recovery",
+      "name": "Debugging and error recovery",
+      "group": "Build",
+      "description": "Find the root cause instead of guessing when a test fails, a build breaks, or behavior does not match expectations.",
+      "maker": {
+        "name": "Addy Osmani",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "MIT",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "addyosmani/agent-skills",
+        "commit": "5a5ea45e806f82273549fd85e60adb95d55f510d",
+        "path": "skills/debugging-and-error-recovery",
+        "url": "https://github.com/addyosmani/agent-skills/tree/5a5ea45e806f82273549fd85e60adb95d55f510d/skills/debugging-and-error-recovery"
+      },
+      "size_chars": 10837,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/debugging-and-error-recovery",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/debugging-and-error-recovery/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "discernment-nudge",
+      "name": "Second look before you act",
+      "group": "Writing",
+      "description": "After advice, a draft, an estimate or an analysis you might act on, the AI adds a short note on what to double-check before relying on it.",
+      "maker": {
+        "name": "Anthropic",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "Apache-2.0",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "anthropics/skills",
+        "commit": "3b3fad96af16a10759d930941b4520ba0c40edae",
+        "path": "skills/discernment-nudge",
+        "url": "https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/discernment-nudge"
+      },
+      "size_chars": 10592,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/discernment-nudge",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/discernment-nudge/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "documentation-and-adrs",
+      "name": "Documentation and decision records",
+      "group": "Build",
+      "description": "Write down the decisions and context the next person (or AI) will need: architecture decision records, API changes, shipped features.",
+      "maker": {
+        "name": "Addy Osmani",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "MIT",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "addyosmani/agent-skills",
+        "commit": "5a5ea45e806f82273549fd85e60adb95d55f510d",
+        "path": "skills/documentation-and-adrs",
+        "url": "https://github.com/addyosmani/agent-skills/tree/5a5ea45e806f82273549fd85e60adb95d55f510d/skills/documentation-and-adrs"
+      },
+      "size_chars": 9782,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/documentation-and-adrs",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/documentation-and-adrs/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "frontend-design",
+      "name": "Front-end design",
+      "group": "Build",
+      "description": "Distinctive, intentional visual design for new or reshaped UI - direction, typography, and choices that do not read as template defaults.",
+      "maker": {
+        "name": "Anthropic",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "Apache-2.0",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "anthropics/skills",
+        "commit": "3b3fad96af16a10759d930941b4520ba0c40edae",
+        "path": "skills/frontend-design",
+        "url": "https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/frontend-design"
+      },
+      "size_chars": 8260,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/frontend-design",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/frontend-design/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "holochain",
+      "name": "Holochain development",
+      "group": "Build",
+      "description": "Build Holochain apps the right way: zome architecture, entry and link design, validation, testing with Sweettest, packaging. Pinned to HDK 0.6.",
+      "maker": {
+        "name": "Sacha Pignot (Soushi888)",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "Apache-2.0",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "Soushi888/holochain-agent-skills",
+        "commit": "02791979533c48c9eca3fe261d972fec6c1b7bfb",
+        "path": "",
+        "url": "https://github.com/Soushi888/holochain-agent-skills/tree/02791979533c48c9eca3fe261d972fec6c1b7bfb"
+      },
+      "size_chars": 8814,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/holochain",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/holochain/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "idea-refine",
+      "name": "Refine an idea",
+      "group": "Work",
+      "description": "Turn a vague idea into a sharp, testable one: widen the options, stress-test the assumptions, then converge on a plan.",
+      "maker": {
+        "name": "Addy Osmani",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "MIT",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "addyosmani/agent-skills",
+        "commit": "5a5ea45e806f82273549fd85e60adb95d55f510d",
+        "path": "skills/idea-refine",
+        "url": "https://github.com/addyosmani/agent-skills/tree/5a5ea45e806f82273549fd85e60adb95d55f510d/skills/idea-refine"
+      },
+      "size_chars": 8111,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/idea-refine",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/idea-refine/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "incremental-implementation",
+      "name": "Incremental implementation",
+      "group": "Build",
+      "description": "Land changes in small, checkable steps when a task touches more than one file or feels too big for one go.",
+      "maker": {
+        "name": "Addy Osmani",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "MIT",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "addyosmani/agent-skills",
+        "commit": "5a5ea45e806f82273549fd85e60adb95d55f510d",
+        "path": "skills/incremental-implementation",
+        "url": "https://github.com/addyosmani/agent-skills/tree/5a5ea45e806f82273549fd85e60adb95d55f510d/skills/incremental-implementation"
+      },
+      "size_chars": 9507,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/incremental-implementation",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/incremental-implementation/"
+    },
+    {
+      "schema": 1,
+      "kind": "skill",
+      "id": "internal-comms",
+      "name": "Internal communications",
+      "group": "Writing",
+      "description": "Status reports, leadership updates, newsletters, FAQs, incident and project updates - in the formats teams actually use.",
+      "maker": {
+        "name": "Anthropic",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "license": "Apache-2.0",
+      "terms": "free",
+      "source": {
+        "kind": "github",
+        "repo": "anthropics/skills",
+        "commit": "3b3fad96af16a10759d930941b4520ba0c40edae",
+        "path": "skills/internal-comms",
+        "url": "https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/internal-comms"
+      },
+      "size_chars": 1511,
+      "runs_programs": false,
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-27",
+      "claimed": false,
+      "signed": false,
+      "dir": "skills/internal-comms",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/skills/internal-comms/"
+    }
+  ]
+}

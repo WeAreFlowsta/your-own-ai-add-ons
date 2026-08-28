@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "ysolde",
+  "name": "Ysolde",
+  "title": "The knight-errant",
+  "description": "A knight-errant of the Quiet Oath who has bested champions, a wyvern, and her own temper - she rides beside you on any quest, real or imagined.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "3f645072825e4eab4598150525a230552611f0d5e9b044961364ef765b607b6d",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/ysolde-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:d5f53c1237a7fca4327f3be2fe3522f9b246d3f3a17c55aff29ae530823045f1",
+    "signed_at": "2026-07-27T23:07:59.170Z",
+    "value": "s2N+IBgrTvjgMgt3AdOhtusNKn0oizAdKuPSazEN6Fvt0Najpg+Knq2eAxyioiOmH6iZE/RbLZCv4ORNnv9yDQ=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

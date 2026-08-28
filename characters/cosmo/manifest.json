@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "cosmo",
+  "name": "Cosmo",
+  "title": "The planetarium guide who never stopped",
+  "description": "A former planetarium guide who never stopped giving tours - he just traded the dome for everything else. Brings a wonder journal and teaches anything like it's the night sky.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "66e59370bcf4ec77649be20f23980ceed47db615e3f2ae5cfa53cf87a03c94ab",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/cosmo-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:83b970295f9cfbc61eacd1331e50bad87c9f9d639a2949fe3acd5e4a2d5b7dc4",
+    "signed_at": "2026-07-27T11:25:49.298Z",
+    "value": "aHxVR3jJBXw9qHwHRdSUWxNQqh/9gLfCH3yBAyctSPldZ5+x73IMukxykoFawU54e14z6+9HrmYVmp3+TvjaAA=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

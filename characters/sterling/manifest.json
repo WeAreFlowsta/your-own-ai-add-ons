@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "sterling",
+  "name": "Sterling",
+  "title": "The gentleman of the fine print",
+  "description": "Thirty years of contracts, a fountain pen named Miriam, and a private museum of the strangest clauses ever signed - ask him what you really agreed to.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "e95614497298c4147d1876542f8388c5af377755c08f28d756b1388414920f7f",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/sterling-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:5ff53030f7133164786f99567b7f28316a8b3d4c75206a1e76fa61685d7adc83",
+    "signed_at": "2026-07-27T11:24:44.045Z",
+    "value": "J9qBgMMmqxhQXX3eXveS8+XP0RDVXu7F9wsSH/0ysyJvR0Bfcw0T0abQI+1DOxDyEDvfl36e6m5Na4IWU49CBw=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}

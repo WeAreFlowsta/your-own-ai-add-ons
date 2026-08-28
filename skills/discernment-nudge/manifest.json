@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "kind": "skill",
+  "id": "discernment-nudge",
+  "name": "Second look before you act",
+  "group": "Writing",
+  "description": "After advice, a draft, an estimate or an analysis you might act on, the AI adds a short note on what to double-check before relying on it.",
+  "maker": {
+    "name": "Anthropic",
+    "handle": null,
+    "agent_pub_key": null
+  },
+  "license": "Apache-2.0",
+  "terms": "free",
+  "source": {
+    "kind": "github",
+    "repo": "anthropics/skills",
+    "commit": "3b3fad96af16a10759d930941b4520ba0c40edae",
+    "path": "skills/discernment-nudge",
+    "url": "https://github.com/anthropics/skills/tree/3b3fad96af16a10759d930941b4520ba0c40edae/skills/discernment-nudge"
+  },
+  "size_chars": 10592,
+  "runs_programs": false,
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-27",
+  "claimed": false
+}

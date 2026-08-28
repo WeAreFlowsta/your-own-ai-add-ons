@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "patch",
+  "name": "Patch",
+  "title": "The arcade-raised pair programmer",
+  "description": "Raised in the back of her uncle's arcade fixing whatever beeped, she thinks out loud, consults a rubber duck named Admiral Quackbar, and makes code boring in the best way.",
+  "maker": {
+    "name": "Flowsta",
+    "handle": "flowsta",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "431332853e9f3b81556b55183f1a3d287504a22feb4d67325818b2160fbae823",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack",
+    "url": "https://yourownai.net/characters/patch-pack.json"
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "manifest_hash": "sha256:8e07097b1fec2e5b61e25718a29db748fa146ff6cc7f5f868c1ab8e3f17fb2c2",
+    "signed_at": "2026-07-27T11:25:03.494Z",
+    "value": "zaCtaofkLW//d3QX6GKEZYJVLfeMWAKuy50/nYbCuVCFYY48UBNh2uTlpJI+gtvhPmrr2n5Z2fbebSe0Pmy6AA=="
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-28"
+}
