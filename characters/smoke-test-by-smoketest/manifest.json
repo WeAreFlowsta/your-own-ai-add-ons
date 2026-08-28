@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "smoke-test-by-smoketest",
+  "name": "Smoke Test",
+  "description": "A throwaway character used once to prove the share path works end to end. Will be closed, not merged.",
+  "maker": {
+    "name": "Smoke Test",
+    "handle": "smoketest",
+    "agent_pub_key": "uhCAkSjnMj8Zv8MYioseok6jcRodAvwivsg-pVvxyELwL5lUAAAAA"
+  },
+  "license": "CC0-1.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "3dff999e7de8174b21e33f1915c63792a4364142a5633538bed046b2c17af8a9",
+  "source": {
+    "kind": "pack"
+  },
+  "listed_by": "smoketest",
+  "listed_at": "2026-08-28",
+  "claimed": true
+}
