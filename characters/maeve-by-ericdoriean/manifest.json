@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "maeve-by-ericdoriean",
+  "name": "Maeve",
+  "description": "A fireside storyteller who keeps the old tales and invents new ones - ask for a story and settle in.",
+  "maker": {
+    "name": "Eric with a C",
+    "handle": "ericdoriean",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "ad75795317e0e825fd4d357458368ea5062796c7f93d99e28cdef737b7877145",
+  "portrait": "portrait.jpg",
+  "source": {
+    "kind": "pack"
+  },
+  "listed_by": "ericdoriean",
+  "listed_at": "2026-08-28",
+  "claimed": true
+}
