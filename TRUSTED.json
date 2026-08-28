@@ -1,0 +1,4 @@
+{
+  "_": "Makers whose NEW listings may merge without a human when CI verify passes and the AI review is clear. Updates to an existing listing signed by the same key merge on their own for everyone.",
+  "handles": ["flowsta"]
+}

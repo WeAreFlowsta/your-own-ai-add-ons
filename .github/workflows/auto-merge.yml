@@ -1,0 +1,39 @@
+name: Auto-merge
+# When both checks pass on a pull request, merge it if the policy allows:
+# an update signed by the same maker, or a first listing from a trusted
+# maker. Everything else waits for a person - the AI review comment is
+# already on the PR to read.
+on:
+  workflow_run:
+    workflows: ["Verify listings", "AI review"]
+    types: [completed]
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  merge:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Find the pull request and its checks
+        id: pr
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          sha="${{ github.event.workflow_run.head_sha }}"
+          num=$(gh pr list --state open --search "$sha" --json number,headRefOid --jq ".[] | select(.headRefOid==\"$sha\") | .number" | head -1)
+          if [ -z "$num" ]; then echo "no open PR for $sha"; exit 0; fi
+          echo "number=$num" >> "$GITHUB_OUTPUT"
+          verify=$(gh run list --workflow "Verify listings" --commit "$sha" --json conclusion --jq '.[0].conclusion')
+          review=$(gh run list --workflow "AI review" --commit "$sha" --json conclusion --jq '.[0].conclusion')
+          echo "verify=$verify review=$review"
+          if [ "$verify" != "success" ] || [ "$review" != "success" ]; then echo "checks not both green yet"; exit 0; fi
+          if gh pr view "$num" --json labels --jq '.labels[].name' | grep -q '^needs-look$'; then echo "needs-look label set - a person decides"; exit 0; fi
+          gh pr checkout "$num"
+          base=$(gh pr view "$num" --json baseRefOid --jq .baseRefOid)
+          decision=$(BASE_SHA="$base" node scripts/merge-policy.mjs)
+          echo "policy: $decision"
+          if [ "$decision" = "merge" ]; then
+            gh pr merge "$num" --squash --delete-branch --body "Merged by policy: verify passed, AI review clear, and this is an update by the same maker or a trusted maker."
+          fi

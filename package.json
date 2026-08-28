@@ -8,6 +8,11 @@
     "verify": "node scripts/verify.mjs",
     "index": "node scripts/build-index.mjs"
   },
-  "engines": { "node": ">=20" },
-  "dependencies": { "tweetnacl": "^1.0.3" }
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "tweetnacl": "^1.0.3",
+    "adm-zip": "^0.5.16"
+  }
 }
