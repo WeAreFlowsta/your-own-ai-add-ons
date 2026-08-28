@@ -5,6 +5,8 @@
 // - skill: a github source is pinned to a 40-char commit; a zip source has
 //   the file, sha256 matches, the signature verifies over the digest bytes,
 //   SKILL.md is inside; anything that ships programs must say runs_programs
+// - mcp (tools/): a recipe - transport + command/args or a local url, needs,
+//   an optional fetch (https .git), source.url; runs_programs must be true
 // - a listing without a maker signature is allowed only when listed_by is
 //   "flowsta" (reviewed open-source listings)
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
@@ -15,7 +17,7 @@ const root = process.cwd();
 const targets = process.argv.slice(2);
 const dirs = targets.length
   ? targets
-  : ["characters", "skills"].flatMap((k) => (existsSync(join(root, k)) ? readdirSync(join(root, k)).map((d) => join(k, d)) : []));
+  : ["characters", "skills", "tools"].flatMap((k) => (existsSync(join(root, k)) ? readdirSync(join(root, k)).map((d) => join(k, d)) : []));
 
 let failures = 0;
 const fail = (dir, msg) => { failures++; console.log(`FAIL ${dir}: ${msg}`); };
@@ -32,6 +34,7 @@ for (const dir of dirs) {
   if (m.id !== folder) fail(dir, `id "${m.id}" does not match folder "${folder}"`);
   if (dir.startsWith("characters") && m.kind !== "character") fail(dir, "kind must be character here");
   if (dir.startsWith("skills") && m.kind !== "skill") fail(dir, "kind must be skill here");
+  if (dir.startsWith("tools") && m.kind !== "mcp") fail(dir, "kind must be mcp here");
 
   if (m.kind === "character") {
     const pp = join(full, m.file || "pack.json");
@@ -70,6 +73,29 @@ for (const dir of dirs) {
       const programs = /\.(sh|py|js|ts|mjs|ps1|bat|cmd|exe|rb)(\x00|PK|$)/.test(listing) || /(^|\/)(scripts|hooks|bin)\//.test(listing) || /\.mcp\.json|hooks\.json/.test(listing);
       if (programs && !m.runs_programs) fail(dir, "zip ships programs but runs_programs is not true");
     } else fail(dir, "source.kind must be github or zip");
+  }
+  if (m.kind === "mcp") {
+    // A tool listing is a recipe, not a file: how to start an MCP server,
+    // what it needs, and where its source lives. Nothing is fetched at
+    // listing time; the app fetches only behind a button that says so.
+    const r = m.mcp || {};
+    if (r.transport === "stdio") {
+      if (typeof r.command !== "string" || !r.command.trim()) fail(dir, "mcp.command missing");
+      if (!Array.isArray(r.args) || r.args.some((a) => typeof a !== "string")) fail(dir, "mcp.args must be an array of strings");
+    } else if (r.transport === "http") {
+      if (!/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(r.url || "")) fail(dir, "mcp.url must be a local address (127.0.0.1 or localhost)");
+    } else fail(dir, "mcp.transport must be stdio or http");
+    for (const n of r.needs || []) {
+      if (typeof n.program !== "string" || typeof n.label !== "string" || !/^https:\/\//.test(n.install || "")) fail(dir, "mcp.needs entries need program, label, install (https)");
+    }
+    if (r.fetch) {
+      if (!/^https:\/\/[^\s]+\.git$/.test(r.fetch.url || "")) fail(dir, "mcp.fetch.url must be an https .git URL");
+      if (!/^[a-z0-9][a-z0-9_-]{0,63}$/i.test(r.fetch.dest || "")) fail(dir, "mcp.fetch.dest must be a plain folder name");
+    }
+    const src = m.source || {};
+    if (!/^https:\/\//.test(src.url || "")) fail(dir, "source.url (the server's home or repository) must be https");
+    if (m.listed_by !== "flowsta" && !m.claimed && !m.signature) fail(dir, "a tool listing needs a maker signature or a Flowsta review");
+    if (m.runs_programs !== true) fail(dir, "a tool runs programs by definition - runs_programs must be true");
   }
   if (!failures) console.log(`ok   ${dir}`);
 }

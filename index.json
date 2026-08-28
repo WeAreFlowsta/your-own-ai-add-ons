@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-28T05:58:46.372Z",
-  "count": 16,
+  "generated_at": "2026-08-28T23:30:08.509Z",
+  "count": 17,
   "items": [
     {
       "schema": 1,
@@ -490,6 +490,64 @@
       "file_url": null,
       "portrait_url": null,
       "page": "https://yourownai.net/add-ons/skills/internal-comms/"
+    },
+    {
+      "schema": 1,
+      "kind": "mcp",
+      "id": "blender",
+      "name": "Blender",
+      "title": "Scenes, the Python API, code, screenshots, renders",
+      "description": "The official Blender Lab MCP server. Analyze a scene and find what is slowing it down, search the Python API and manual, run code in Blender through your approve step, jump the viewport, take a screenshot, render a thumbnail.",
+      "license": "GPL-3.0-or-later",
+      "terms": "free",
+      "maker": {
+        "name": "Blender Foundation (Blender Lab)",
+        "handle": null,
+        "agent_pub_key": null
+      },
+      "source": {
+        "kind": "git",
+        "url": "https://projects.blender.org/lab/blender_mcp",
+        "ref": "v1.0.0"
+      },
+      "runs_programs": true,
+      "mcp": {
+        "transport": "stdio",
+        "command": "uv",
+        "args": [
+          "--directory",
+          "~/blender_mcp/mcp",
+          "run",
+          "blender-mcp"
+        ],
+        "needs": [
+          {
+            "program": "uv",
+            "label": "uv (runs the Python server)",
+            "install": "https://docs.astral.sh/uv/getting-started/installation/"
+          },
+          {
+            "program": "git",
+            "label": "git (fetches the server once)",
+            "install": "https://git-scm.com/downloads"
+          }
+        ],
+        "fetch": {
+          "url": "https://projects.blender.org/lab/blender_mcp.git",
+          "dest": "blender_mcp",
+          "size": "a few MB"
+        },
+        "also": "Blender 5.1 or newer with the Blender Lab MCP add-on installed and enabled (blender.org/lab/mcp-server).",
+        "http_alt": "uv --directory ~/blender_mcp/mcp run blender-mcp --transport http --port 9191"
+      },
+      "listed_by": "flowsta",
+      "listed_at": "2026-08-29",
+      "claimed": false,
+      "signed": false,
+      "dir": "tools/blender",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/tools/blender/"
     }
   ]
 }

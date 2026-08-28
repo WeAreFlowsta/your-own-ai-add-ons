@@ -4,8 +4,10 @@
 import nacl from "tweetnacl";
 import { createHash } from "node:crypto";
 
-export const LICENSES = ["CC-BY-4.0", "CC-BY-SA-4.0", "CC0-1.0", "MIT", "Apache-2.0"];
-export const KINDS = ["character", "skill"];
+export const LICENSES = ["CC-BY-4.0", "CC-BY-SA-4.0", "CC0-1.0", "MIT", "Apache-2.0", "GPL-3.0-or-later", "GPL-2.0-or-later"];
+export const KINDS = ["character", "skill", "mcp"];
+/** Folder per kind in this repo and on the site. */
+export const KIND_DIRS = { character: "characters", skill: "skills", mcp: "tools" };
 export const MAX_PACK_BYTES = 2 * 1024 * 1024;
 export const MAX_SKILL_ZIP_BYTES = 50 * 1024 * 1024;
 

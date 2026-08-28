@@ -5,7 +5,7 @@ import { join } from "node:path";
 const root = process.cwd();
 const RAW = "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main";
 const items = [];
-for (const kind of ["characters", "skills"]) {
+for (const kind of ["characters", "skills", "tools"]) {
   if (!existsSync(join(root, kind))) continue;
   for (const d of readdirSync(join(root, kind)).sort()) {
     const mp = join(root, kind, d, "manifest.json");

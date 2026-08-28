@@ -1,7 +1,7 @@
 # Your Own AI add-ons directory
 
 The public list of add-ons for [Your Own AI](https://yourownai.net): **characters**
-(complete AIs as signed packs) and **skills** (folders of instructions in the
+(complete AIs as signed packs), **skills** (folders of instructions in the
 Agent Skills open standard). The app reads `index.json`; yourownai.net builds
 its `/add-ons/` pages from it.
 
@@ -11,6 +11,10 @@ Every listing is one folder with a `manifest.json`:
   maker's Flowsta identity), `portrait.jpg`
 - `skills/<id>/` - `manifest.json` and either a pinned GitHub source
   (`source.kind: github`, full commit) or a signed `skill.zip`
+- `tools/<id>/` - `manifest.json` only: an MCP server recipe (`mcp.transport`,
+  `command` + `args` or a local `url`, `needs` with install links, an optional
+  `fetch` git URL the app clones only when the person presses Add, `source.url`).
+  Nothing is redistributed here; `runs_programs` is always true.
 
 ## Adding one
 
