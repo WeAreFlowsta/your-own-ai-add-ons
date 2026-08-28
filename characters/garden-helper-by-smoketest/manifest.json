@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "kind": "character",
+  "id": "garden-helper-by-smoketest",
+  "name": "Garden Helper",
+  "title": "The garden helper",
+  "description": "A calm companion for planning a small vegetable garden: what to plant this month, how to space it, when to water. Test listing, will be closed.",
+  "maker": {
+    "name": "Smoke Test",
+    "handle": "smoketest",
+    "agent_pub_key": "uhCAkYjdp_iIO__SIpUij9N267Ywsz9nx0vpQBJvFIZ-OvOMAAAAA"
+  },
+  "license": "CC-BY-4.0",
+  "terms": "free",
+  "file": "pack.json",
+  "sha256": "2df12d469b276f05da99d7f26580cdbbe2c7849ae98de2eb8f64df662af0d6cb",
+  "source": {
+    "kind": "pack"
+  },
+  "listed_by": "smoketest",
+  "listed_at": "2026-08-28",
+  "claimed": true
+}
