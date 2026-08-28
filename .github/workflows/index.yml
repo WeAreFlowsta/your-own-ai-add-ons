@@ -24,5 +24,21 @@ jobs:
           git config user.name "add-ons-directory bot"
           git config user.email "bot@yourownai.net"
           git add index.json
-          git diff --cached --quiet || git commit -m "index: rebuild"
-          git push
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "index: rebuild"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+        id: commit
+      # yourownai.net bakes the directory in at build time: ask Cloud Build
+      # to rebuild + deploy production (same main, fresh index) so a merged
+      # share is on the site within minutes, not at the next manual deploy.
+      - name: Rebuild yourownai.net
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          HOOK: ${{ secrets.REDEPLOY_WEBHOOK_URL }}
+        run: |
+          [ -n "$HOOK" ] || { echo "no REDEPLOY_WEBHOOK_URL - skipped"; exit 0; }
+          curl -sf -X POST -H "Content-Type: application/json" -d '{"source":"add-ons-index"}' "$HOOK" > /dev/null && echo "site rebuild requested"
