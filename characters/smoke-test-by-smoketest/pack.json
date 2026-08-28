@@ -1,0 +1,22 @@
+{
+  "format": "your-own-ai/ai-pack",
+  "version": 1,
+  "name": "Smoke Test",
+  "description": "A throwaway character used once to prove the share path works end to end. Will be closed, not merged.",
+  "baseArchetypeId": "reeves",
+  "systemPrompt": "You are a smoke test.",
+  "askBlurb": "",
+  "emoji": "",
+  "useEmojis": false,
+  "lengthDisposition": "conversational",
+  "defaultMode": "chat",
+  "thumbnail": "",
+  "knowledge": [],
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAkSjnMj8Zv8MYioseok6jcRodAvwivsg-pVvxyELwL5lUAAAAA",
+    "manifest_hash": "sha256:b316eba9616c12e3aa9e21d2d5416f5714647bc589833ae78a436c50a68d0a47",
+    "signed_at": "2026-08-28T05:41:34.585Z",
+    "value": "0cvCYLOvDxRwd+g7YOFc2dAHJJ70is3kInlDV32lqQW4JqVVNzd7vcYongrKMHgTKDV+YeHoQh1hYncF7G9hBg=="
+  }
+}
