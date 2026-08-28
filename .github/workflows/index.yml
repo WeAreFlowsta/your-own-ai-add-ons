@@ -10,7 +10,10 @@ jobs:
   index:
     runs-on: ubuntu-latest
     steps:
+      # Pushes as the yourownai bot: main requires the verify + AI review
+      # checks, and the Write role is on the bypass list for this one commit.
       - uses: actions/checkout@v4
+        with: { token: "${{ secrets.ADDONS_GITHUB_TOKEN }}" }
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm ci --omit=dev || npm install --omit=dev
