@@ -3,7 +3,7 @@
 import { readFileSync, readdirSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 const root = process.cwd();
-const RAW = "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main";
+const RAW = "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main";
 const items = [];
 for (const kind of ["characters", "skills"]) {
   if (!existsSync(join(root, kind))) continue;

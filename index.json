@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-28T04:41:15.918Z",
+  "generated_at": "2026-08-28T04:58:19.517Z",
   "count": 16,
   "items": [
     {
@@ -28,8 +28,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/cosmo",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/cosmo/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/cosmo/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/cosmo/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/cosmo/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/cosmo/"
     },
     {
@@ -57,8 +57,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/emrys",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/emrys/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/emrys/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/emrys/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/emrys/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/emrys/"
     },
     {
@@ -86,8 +86,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/juniper",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/juniper/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/juniper/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/juniper/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/juniper/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/juniper/"
     },
     {
@@ -115,8 +115,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/maeve",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/maeve/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/maeve/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/maeve/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/maeve/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/maeve/"
     },
     {
@@ -144,8 +144,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/patch",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/patch/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/patch/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/patch/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/patch/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/patch/"
     },
     {
@@ -173,8 +173,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/rook",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/rook/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/rook/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/rook/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/rook/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/rook/"
     },
     {
@@ -202,8 +202,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/sterling",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/sterling/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/sterling/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/sterling/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/sterling/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/sterling/"
     },
     {
@@ -231,8 +231,8 @@
       "listed_at": "2026-08-28",
       "signed": true,
       "dir": "characters/ysolde",
-      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/ysolde/pack.json",
-      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/add-ons-directory/main/characters/ysolde/portrait.jpg",
+      "file_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/ysolde/pack.json",
+      "portrait_url": "https://raw.githubusercontent.com/WeAreFlowsta/your-own-ai-add-ons/main/characters/ysolde/portrait.jpg",
       "page": "https://yourownai.net/add-ons/characters/ysolde/"
     },
     {
