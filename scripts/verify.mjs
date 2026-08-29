@@ -83,7 +83,8 @@ for (const dir of dirs) {
       if (typeof r.command !== "string" || !r.command.trim()) fail(dir, "mcp.command missing");
       if (!Array.isArray(r.args) || r.args.some((a) => typeof a !== "string")) fail(dir, "mcp.args must be an array of strings");
     } else if (r.transport === "http") {
-      if (!/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(r.url || "")) fail(dir, "mcp.url must be a local address (127.0.0.1 or localhost)");
+      const u = r.url || "";
+      if (!(/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(u) || /^\$\{[A-Z0-9_]+\}/.test(u) || /^https?:\/\/[^/]*\$\{/.test(u))) fail(dir, "mcp.url must be a local address or a template filled from a url setting (${KEY}...)");
     } else fail(dir, "mcp.transport must be stdio or http");
     for (const n of r.needs || []) {
       if (typeof n.program !== "string" || typeof n.label !== "string" || !/^https:\/\//.test(n.install || "")) fail(dir, "mcp.needs entries need program, label, install (https)");
@@ -91,6 +92,20 @@ for (const dir of dirs) {
     if (r.fetch) {
       if (!/^https:\/\/[^\s]+\.git$/.test(r.fetch.url || "")) fail(dir, "mcp.fetch.url must be an https .git URL");
       if (!/^[a-z0-9][a-z0-9_-]{0,63}$/i.test(r.fetch.dest || "")) fail(dir, "mcp.fetch.dest must be a plain folder name");
+    }
+    // Settings the tool asks for: described here, filled in by the person in
+    // the app, never a value in a listing.
+    for (const f of r.config || []) {
+      if (!/^[A-Z][A-Z0-9_]{1,63}$/.test(f.key || "")) fail(dir, `mcp.config key "${f.key}" must be UPPER_SNAKE`);
+      if (!["url", "secret", "text", "path"].includes(f.kind)) fail(dir, `mcp.config ${f.key}: kind must be url, secret, text or path`);
+      if (typeof f.label !== "string" || !f.label) fail(dir, `mcp.config ${f.key}: label missing`);
+      if (f.where && f.where !== "env" && f.where !== "arg" && !/^header:[A-Za-z-]+$/.test(f.where)) fail(dir, `mcp.config ${f.key}: where must be env, arg or header:<Name>`);
+      if ("value" in f || "default" in f) fail(dir, `mcp.config ${f.key}: listings describe settings, they never carry values`);
+    }
+    if (r.transport === "http" && /\$\{/.test(r.url || "")) {
+      // a template url is fine when the placeholder is a declared url setting
+      const keys = new Set((r.config || []).filter((f) => f.kind === "url").map((f) => f.key));
+      for (const m2 of (r.url || "").matchAll(/\$\{([A-Z0-9_]+)\}/g)) if (!keys.has(m2[1])) fail(dir, `mcp.url uses \${${m2[1]}} which is not a url setting`);
     }
     const src = m.source || {};
     if (!/^https:\/\//.test(src.url || "")) fail(dir, "source.url (the server's home or repository) must be https");
