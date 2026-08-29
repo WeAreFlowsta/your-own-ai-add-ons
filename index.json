@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-29T05:50:56.255Z",
+  "generated_at": "2026-08-29T06:04:23.638Z",
   "count": 21,
   "items": [
     {
@@ -637,7 +637,7 @@
         "also": "Blender 5.1 or newer with the Blender Lab MCP add-on installed and enabled (blender.org/lab/mcp-server) - the app can install it for you once the tool is added. The add-on opens a local connection only when Blender's own \"Allow Online Access\" setting is on (Edit > Preferences > System); the app turns it on with your OK when it installs the add-on.",
         "http_alt": "uv --directory ~/blender_mcp/mcp run --with \"mcp[cli]<2\" blender-mcp --transport http --port 9191",
         "note_for_maintainers": "args pin the mcp Python package below 2.0: Blender Lab v1.0.0 imports the older API (2026-08).",
-        "guidance": "Blender is open and connected to you through its add-on. Make every change with execute_blender_code in that live session - the person watches it happen in their viewport. Never run blender --background, --python or --python-expr from the terminal on the open file: that edits a second copy on disk that the open Blender does not show. Look before you act (get_objects_summary), do not save the file unless asked, and use the _for_cli variants only when no Blender is open."
+        "guidance": "Blender is open and connected to you through its add-on. Make every change with execute_blender_code in that live session - the person watches it happen in their viewport. Work in small steps: several short calls of a few seconds each rather than one long script, so Blender stays responsive and the person sees progress; keep geometry simple unless asked for detail. Never run blender --background, --python or --python-expr from the terminal on the open file: that edits a second copy on disk that the open Blender does not show. Look before you act (get_objects_summary), do not save the file unless asked, and use the _for_cli variants only when no Blender is open."
       },
       "listed_by": "flowsta",
       "listed_at": "2026-08-29",
