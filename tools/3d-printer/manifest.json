@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "kind": "mcp",
+  "id": "3d-printer",
+  "name": "3D printer",
+  "title": "Slice, print and watch your printer",
+  "description": "Community server for OctoPrint, Klipper (Moonraker), Duet, Repetier, Prusa Connect, Creality and Bambu Lab printers: check status, upload and start prints, edit STL files (scale, rotate, section), slice with your slicer. Talks to the printer on your network with the key you give it.",
+  "license": "GPL-2.0-only",
+  "terms": "free",
+  "maker": {
+    "name": "DMontgomery40 (community)",
+    "handle": null,
+    "agent_pub_key": null
+  },
+  "source": {
+    "kind": "npm",
+    "url": "https://github.com/DMontgomery40/mcp-3D-printer-server"
+  },
+  "runs_programs": true,
+  "mcp": {
+    "transport": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-3d-printer-server"
+    ],
+    "needs": [
+      {
+        "program": "npx",
+        "label": "Node.js (npx runs the server)",
+        "install": "https://nodejs.org/en/download"
+      }
+    ],
+    "config": [
+      {
+        "key": "PRINTER_TYPE",
+        "label": "Printer system",
+        "kind": "text",
+        "required": true,
+        "hint": "octoprint, klipper, duet, repetier, bambu, prusa or creality"
+      },
+      {
+        "key": "PRINTER_HOST",
+        "label": "Printer address on your network",
+        "kind": "text",
+        "required": true,
+        "hint": "192.168.1.50 or octopi.local"
+      },
+      {
+        "key": "PRINTER_PORT",
+        "label": "Port",
+        "kind": "text",
+        "required": false,
+        "hint": "80 unless yours differs"
+      },
+      {
+        "key": "API_KEY",
+        "label": "API key",
+        "kind": "secret",
+        "required": false,
+        "hint": "from your printer system's settings (not needed for Bambu)"
+      },
+      {
+        "key": "BAMBU_SERIAL",
+        "label": "Bambu: printer serial",
+        "kind": "text",
+        "required": false,
+        "hint": "Bambu Lab only"
+      },
+      {
+        "key": "BAMBU_TOKEN",
+        "label": "Bambu: access code",
+        "kind": "secret",
+        "required": false,
+        "hint": "Bambu Lab only"
+      },
+      {
+        "key": "BAMBU_MODEL",
+        "label": "Bambu: model",
+        "kind": "text",
+        "required": false,
+        "hint": "p1s, p1p, x1c, x1e, a1, a1mini or h2d"
+      }
+    ],
+    "also": "The first run downloads the server package with npm. Slicing needs a slicer installed (PrusaSlicer, OrcaSlicer, Cura or Bambu Studio); status and printing do not."
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-29",
+  "claimed": false
+}

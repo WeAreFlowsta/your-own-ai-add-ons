@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "kind": "mcp",
+  "id": "home-assistant",
+  "name": "Home Assistant",
+  "title": "Your smart home, from a conversation",
+  "description": "Home Assistant's own MCP server: the AI can see and control what you expose to it - lights, switches, climate, to-do lists - over your network, with a token you create. Nothing leaves your home; every action goes through your approve step.",
+  "license": "Apache-2.0",
+  "terms": "free",
+  "maker": {
+    "name": "Home Assistant (Open Home Foundation)",
+    "handle": null,
+    "agent_pub_key": null
+  },
+  "source": {
+    "kind": "integration",
+    "url": "https://www.home-assistant.io/integrations/mcp_server/"
+  },
+  "runs_programs": true,
+  "mcp": {
+    "transport": "http",
+    "url": "${HASS_URL}/api/mcp",
+    "needs": [],
+    "config": [
+      {
+        "key": "HASS_URL",
+        "label": "Home Assistant address",
+        "kind": "url",
+        "required": true,
+        "hint": "http://homeassistant.local:8123",
+        "where": "arg"
+      },
+      {
+        "key": "HASS_TOKEN",
+        "label": "Long-lived access token",
+        "kind": "secret",
+        "required": true,
+        "hint": "created under your profile in Home Assistant",
+        "where": "header:Authorization",
+        "prefix": "Bearer "
+      }
+    ],
+    "also": "In Home Assistant, add the Model Context Protocol Server integration and choose what it may expose (Settings > Voice assistants > Assist); create a long-lived access token under your profile. The AI can act only on what you exposed."
+  },
+  "listed_by": "flowsta",
+  "listed_at": "2026-08-29",
+  "claimed": false
+}
