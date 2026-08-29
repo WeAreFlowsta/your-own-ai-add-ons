@@ -71,3 +71,29 @@ export function checkManifest(m) {
   if (m.maker && typeof m.maker.name !== "string") errors.push("maker.name missing");
   return errors;
 }
+
+/** Canonical bytes a maker signs for a tool listing (a recipe, not a file):
+ *  the same fields the app hashes in share.ts recipeCanonical(). Config
+ *  fields are described, never valued - so values can never be signed in. */
+export function recipeDigest(m) {
+  const r = m.mcp || {};
+  const canonical = JSON.stringify({
+    kind: "mcp",
+    name: m.name,
+    description: m.description,
+    license: m.license,
+    source_url: (m.source && m.source.url) || "",
+    mcp: {
+      transport: r.transport,
+      command: r.command ?? "",
+      args: r.args ?? [],
+      url: r.url ?? "",
+      needs: (r.needs ?? []).map((n) => ({ program: n.program, label: n.label, install: n.install })),
+      config: (r.config ?? []).map((f) => ({ key: f.key, label: f.label, kind: f.kind, required: !!f.required, hint: f.hint ?? "", where: f.where ?? "", prefix: f.prefix ?? "" })),
+      fetch: r.fetch ? { url: r.fetch.url, dest: r.fetch.dest } : null,
+    },
+  });
+  return createHash("sha256").update(Buffer.from(canonical, "utf8")).digest();
+}
+/** Launchers a maker-listed tool may use (package managers do the fetching). */
+export const TOOL_LAUNCHERS = ["uv", "uvx", "npx", "pipx", "docker", "python", "python3", "node", "deno", "bunx"];

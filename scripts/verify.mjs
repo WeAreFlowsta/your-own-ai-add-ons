@@ -11,7 +11,7 @@
 //   "flowsta" (reviewed open-source listings)
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join } from "node:path";
-import { checkManifest, packDigest, verifySignature, sha256Hex, MAX_PACK_BYTES, MAX_SKILL_ZIP_BYTES } from "./lib.mjs";
+import { checkManifest, packDigest, recipeDigest, verifySignature, sha256Hex, MAX_PACK_BYTES, MAX_SKILL_ZIP_BYTES, TOOL_LAUNCHERS } from "./lib.mjs";
 
 const root = process.cwd();
 const targets = process.argv.slice(2);
@@ -110,6 +110,17 @@ for (const dir of dirs) {
     const src = m.source || {};
     if (!/^https:\/\//.test(src.url || "")) fail(dir, "source.url (the server's home or repository) must be https");
     if (m.listed_by !== "flowsta" && !m.claimed && !m.signature) fail(dir, "a tool listing needs a maker signature or a Flowsta review");
+    if (m.signature) {
+      if (!verifySignature(m.signature, recipeDigest(m))) fail(dir, "tool signature does not verify over the recipe");
+      if (m.maker?.agent_pub_key && m.maker.agent_pub_key !== m.signature.agent_pub_key) fail(dir, "maker key differs from the recipe's signing key");
+    }
+    if (m.listed_by !== "flowsta") {
+      // Maker-listed tools: the machine is reached only through launchers that verify what they fetch.
+      const launcher = (r.command || "").split(/[\\/]/).pop();
+      if (r.transport === "stdio" && !TOOL_LAUNCHERS.includes(launcher)) fail(dir, `maker listings may launch only ${TOOL_LAUNCHERS.join(", ")}`);
+      const joined = [r.command, ...(r.args || [])].join(" ");
+      if (/\b(curl|wget)\b.*\|\s*(sh|bash|zsh|powershell|iex)/i.test(joined) || /\b(sh|bash)\s+-c\b/.test(joined)) fail(dir, "no piped or inline shell in a listing");
+    }
     if (m.runs_programs !== true) fail(dir, "a tool runs programs by definition - runs_programs must be true");
   }
   if (!failures) console.log(`ok   ${dir}`);
