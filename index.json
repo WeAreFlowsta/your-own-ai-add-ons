@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-29T01:13:16.430Z",
+  "generated_at": "2026-08-29T03:00:45.113Z",
   "count": 21,
   "items": [
     {
@@ -613,6 +613,8 @@
           "--directory",
           "~/blender_mcp/mcp",
           "run",
+          "--with",
+          "mcp[cli]<2",
           "blender-mcp"
         ],
         "needs": [
@@ -632,8 +634,8 @@
           "dest": "blender_mcp",
           "size": "a few MB"
         },
-        "also": "Blender 5.1 or newer with the Blender Lab MCP add-on installed and enabled (blender.org/lab/mcp-server).",
-        "http_alt": "uv --directory ~/blender_mcp/mcp run blender-mcp --transport http --port 9191"
+        "also": "Blender 5.1 or newer with the Blender Lab MCP add-on installed and enabled (blender.org/lab/mcp-server). The server is started with the mcp Python package pinned below 2.0 - its code still uses the older API (2026-08).",
+        "http_alt": "uv --directory ~/blender_mcp/mcp run --with \"mcp[cli]<2\" blender-mcp --transport http --port 9191"
       },
       "listed_by": "flowsta",
       "listed_at": "2026-08-29",
