@@ -30,7 +30,8 @@
         "install": "https://docs.astral.sh/uv/getting-started/installation/"
       }
     ],
-    "also": "Needs FreeCAD with the freecad-mcp addon installed and its RPC server started inside FreeCAD (see the project's README)."
+    "also": "Needs FreeCAD with the freecad-mcp addon installed and its RPC server started inside FreeCAD (see the project's README).",
+    "guidance": "FreeCAD is open with its addon; make changes through the FreeCAD tools in that live session, not by launching FreeCAD from the terminal. Read the document first, and do not save unless asked."
   },
   "listed_by": "flowsta",
   "listed_at": "2026-08-29",

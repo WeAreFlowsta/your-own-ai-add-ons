@@ -86,6 +86,7 @@ for (const dir of dirs) {
       const u = r.url || "";
       if (!(/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?\//.test(u) || /^\$\{[A-Z0-9_]+\}/.test(u) || /^https?:\/\/[^/]*\$\{/.test(u))) fail(dir, "mcp.url must be a local address or a template filled from a url setting (${KEY}...)");
     } else fail(dir, "mcp.transport must be stdio or http");
+    if (r.guidance !== undefined && (typeof r.guidance !== "string" || r.guidance.length > 800)) fail(dir, "mcp.guidance must be a string of at most 800 characters");
     for (const n of r.needs || []) {
       if (typeof n.program !== "string" || typeof n.label !== "string" || !/^https:\/\//.test(n.install || "")) fail(dir, "mcp.needs entries need program, label, install (https)");
     }

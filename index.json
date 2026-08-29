@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-29T04:31:12.173Z",
+  "generated_at": "2026-08-29T05:33:34.873Z",
   "count": 21,
   "items": [
     {
@@ -636,7 +636,8 @@
         },
         "also": "Blender 5.1 or newer with the Blender Lab MCP add-on installed and enabled (blender.org/lab/mcp-server) - the app can install the add-on for you once the tool is added.",
         "http_alt": "uv --directory ~/blender_mcp/mcp run --with \"mcp[cli]<2\" blender-mcp --transport http --port 9191",
-        "note_for_maintainers": "args pin the mcp Python package below 2.0: Blender Lab v1.0.0 imports the older API (2026-08)."
+        "note_for_maintainers": "args pin the mcp Python package below 2.0: Blender Lab v1.0.0 imports the older API (2026-08).",
+        "guidance": "Blender is open and connected to you through its add-on. Make every change with execute_blender_code in that live session - the person watches it happen in their viewport. Never run blender --background, --python or --python-expr from the terminal on the open file: that edits a second copy on disk that the open Blender does not show. Look before you act (get_objects_summary), do not save the file unless asked, and use the _for_cli variants only when no Blender is open."
       },
       "listed_by": "flowsta",
       "listed_at": "2026-08-29",
@@ -679,7 +680,8 @@
             "install": "https://docs.astral.sh/uv/getting-started/installation/"
           }
         ],
-        "also": "Needs FreeCAD with the freecad-mcp addon installed and its RPC server started inside FreeCAD (see the project's README)."
+        "also": "Needs FreeCAD with the freecad-mcp addon installed and its RPC server started inside FreeCAD (see the project's README).",
+        "guidance": "FreeCAD is open with its addon; make changes through the FreeCAD tools in that live session, not by launching FreeCAD from the terminal. Read the document first, and do not save unless asked."
       },
       "listed_by": "flowsta",
       "listed_at": "2026-08-29",
@@ -776,7 +778,8 @@
             "install": "https://nodejs.org/en/download"
           }
         ],
-        "also": "The first run downloads the server package and a browser build; the AI's browsing shows as steps you approve."
+        "also": "The first run downloads the server package and a browser build; the AI's browsing shows as steps you approve.",
+        "guidance": "Use the browser tools (navigate, snapshot, click, fill) for anything on the web; never fetch pages with curl, wget or a script instead. Read a snapshot before clicking. Do not enter passwords or payment details unless the person gave them for this task."
       },
       "listed_by": "flowsta",
       "listed_at": "2026-08-29",

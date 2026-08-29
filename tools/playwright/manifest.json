@@ -31,7 +31,8 @@
         "install": "https://nodejs.org/en/download"
       }
     ],
-    "also": "The first run downloads the server package and a browser build; the AI's browsing shows as steps you approve."
+    "also": "The first run downloads the server package and a browser build; the AI's browsing shows as steps you approve.",
+    "guidance": "Use the browser tools (navigate, snapshot, click, fill) for anything on the web; never fetch pages with curl, wget or a script instead. Read a snapshot before clicking. Do not enter passwords or payment details unless the person gave them for this task."
   },
   "listed_by": "flowsta",
   "listed_at": "2026-08-29",
