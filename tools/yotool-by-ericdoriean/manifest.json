@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "kind": "mcp",
+  "id": "yotool-by-ericdoriean",
+  "name": "Yotool",
+  "description": "its a cool tool and its the best",
+  "maker": {
+    "name": "Eric with a C",
+    "handle": "ericdoriean",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+  },
+  "license": "MIT",
+  "terms": "free",
+  "source": {
+    "kind": "url",
+    "url": "https://flowsta.com"
+  },
+  "runs_programs": true,
+  "mcp": {
+    "transport": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@playwright/mcp@latest"
+    ],
+    "needs": [
+      {
+        "program": "npx",
+        "label": "Node.js (npx runs the server)",
+        "install": "https://nodejs.org/en/download"
+      }
+    ],
+    "config": []
+  },
+  "signature": {
+    "algo": "ed25519",
+    "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY",
+    "value": "c1LLxkYf/LS9rb3YeDSJ8hi22ZjV9Yjci/MlnQ5hPcSlFNQcnmMFhMpFpDiGSCgq7FD07+bTe6XGLA/HmT/iBg=="
+  },
+  "listed_by": "ericdoriean",
+  "listed_at": "2026-08-30",
+  "claimed": true
+}
