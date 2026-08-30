@@ -10,8 +10,8 @@ import { join } from "node:path";
 const base = process.env.BASE_SHA;
 const trusted = new Set(JSON.parse(readFileSync("TRUSTED.json", "utf8")).handles);
 const changed = execSync(`git diff --name-only ${base}...HEAD`, { encoding: "utf8" }).split("\n").filter(Boolean);
-const dirs = [...new Set(changed.filter((f) => /^(characters|skills)\/[^/]+\//.test(f)).map((f) => f.split("/").slice(0, 2).join("/")))];
-const outside = changed.filter((f) => !/^(characters|skills)\/[^/]+\//.test(f));
+const dirs = [...new Set(changed.filter((f) => /^(characters|skills|tools)\/[^/]+\//.test(f)).map((f) => f.split("/").slice(0, 2).join("/")))];
+const outside = changed.filter((f) => !/^(characters|skills|tools)\/[^/]+\//.test(f));
 if (outside.length) { console.log(`hold: changes outside listings (${outside.slice(0, 3).join(", ")})`); process.exit(0); }
 if (!dirs.length) { console.log("hold: no listing changed"); process.exit(0); }
 for (const dir of dirs) {

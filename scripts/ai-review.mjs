@@ -16,7 +16,7 @@ const repo = process.env.GITHUB_REPOSITORY;
 const base = process.env.BASE_SHA;
 const changed = execSync(`git diff --name-only ${base}...HEAD`, { encoding: "utf8" })
   .split("\n")
-  .filter((f) => /^(characters|skills)\/[^/]+\/manifest\.json$/.test(f));
+  .filter((f) => /^(characters|skills|tools)\/[^/]+\/manifest\.json$/.test(f));
 const dirs = [...new Set(changed.map((f) => f.split("/").slice(0, 2).join("/")))];
 if (!dirs.length) { console.log("no listings changed"); process.exit(0); }
 
@@ -50,6 +50,19 @@ for (const dir of dirs) {
     const list = entries.map((e) => `${e.entryName} (${e.header.size} bytes)`).join("\n");
     const skill = entries.find((e) => /(^|\/)SKILL\.md$/.test(e.entryName));
     content = `FILES:\n${list}\n\nSKILL.md:\n${skill ? zip.readAsText(skill).slice(0, 40_000) : "(missing)"}`;
+  } else if (m.kind === "mcp") {
+    // A tool listing is a recipe, no file: the reviewer judges what it
+    // starts, what it needs, and the settings it asks for (rule 6).
+    const r = m.mcp || {};
+    content = [
+      `TOOL RECIPE (${r.transport})`,
+      r.transport === "stdio" ? `STARTS: ${[r.command, ...(r.args || [])].join(" ")}` : `ADDRESS: ${r.url}`,
+      `NEEDS: ${(r.needs || []).map((n) => `${n.program} (${n.label || ""}; install: ${n.install || ""})`).join(", ") || "nothing"}`,
+      `SETTINGS ASKED FOR: ${(r.config || []).map((f) => `${f.key} [${f.kind}${f.required ? ", required" : ""}] ${f.hint || ""} -> ${f.where || ""}`).join("; ") || "none"}`,
+      r.also ? `ALSO: ${r.also}` : "",
+      r.guidance ? `GUIDANCE TO THE AI:\n${r.guidance}` : "",
+      `SOURCE: ${m.source?.url}`,
+    ].filter(Boolean).join("\n");
   } else {
     content = `GITHUB SOURCE: ${m.source?.url}\n(pinned commit ${m.source?.commit}; the reviewer sees the manifest only - fetch the SKILL.md at that commit for the full text)`;
     try {
