@@ -3,7 +3,8 @@ name: Rebuild index
 on:
   push:
     branches: [main]
-    paths: ["characters/**", "skills/**", "scripts/**"]
+    paths: ["characters/**", "skills/**", "tools/**", "scripts/**"]
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
