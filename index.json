@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-30T06:27:36.794Z",
-  "count": 21,
+  "generated_at": "2026-08-31T06:54:17.058Z",
+  "count": 22,
   "items": [
     {
       "schema": 1,
@@ -647,6 +647,49 @@
       "file_url": null,
       "portrait_url": null,
       "page": "https://yourownai.net/add-ons/tools/blender/"
+    },
+    {
+      "schema": 1,
+      "kind": "mcp",
+      "id": "fetch",
+      "name": "Fetch",
+      "description": "Lets your AI read a web page as clean text - fetched on your computer, converted to markdown, read in pieces so long pages fit. Ask about an article, some docs, or a price page by pasting the link. Much lighter than a full browser when nothing needs clicking.",
+      "maker": {
+        "name": "Eric with a C",
+        "handle": "ericdoriean",
+        "agent_pub_key": "uhCAk75qJ5oobyfm3Lh-akZIQSe2zpSTtG1Pcxs23qTFoQwY_GDWY"
+      },
+      "license": "MIT",
+      "terms": "free",
+      "source": {
+        "kind": "url",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch"
+      },
+      "runs_programs": true,
+      "mcp": {
+        "transport": "stdio",
+        "command": "uvx",
+        "args": [
+          "mcp-server-fetch"
+        ],
+        "needs": [
+          {
+            "program": "uvx",
+            "label": "uv (uvx runs the Python server)",
+            "install": "https://docs.astral.sh/uv/getting-started/installation/"
+          }
+        ],
+        "config": [],
+        "also": "Use fetch to read a page before answering questions about it, and prefer the person's exact link over guessing one. Long pages come in pieces - fetch again with start_index until you have what you need. Say plainly when a page would not loa"
+      },
+      "listed_by": "ericdoriean",
+      "listed_at": "2026-08-31",
+      "claimed": true,
+      "signed": true,
+      "dir": "tools/fetch",
+      "file_url": null,
+      "portrait_url": null,
+      "page": "https://yourownai.net/add-ons/tools/fetch/"
     },
     {
       "schema": 1,
