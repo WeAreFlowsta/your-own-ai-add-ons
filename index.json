@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-31T06:54:17.058Z",
+  "generated_at": "2026-09-04T07:16:19.420Z",
   "count": 22,
   "items": [
     {
@@ -369,7 +369,7 @@
       "id": "holochain",
       "name": "Holochain development",
       "group": "Build",
-      "description": "Build Holochain apps the right way: zome architecture, entry and link design, validation, testing with Sweettest, packaging. Pinned to HDK 0.6.",
+      "description": "Build Holochain apps the right way: zome architecture, entry and link design, validation, testing with Sweettest, packaging, and the move to Holochain 0.7. Version 1.0 of the maker's skill.",
       "maker": {
         "name": "Sacha Pignot (Soushi888)",
         "handle": null,
@@ -380,11 +380,11 @@
       "source": {
         "kind": "github",
         "repo": "Soushi888/holochain-agent-skills",
-        "commit": "02791979533c48c9eca3fe261d972fec6c1b7bfb",
-        "path": "",
-        "url": "https://github.com/Soushi888/holochain-agent-skills/tree/02791979533c48c9eca3fe261d972fec6c1b7bfb"
+        "commit": "e2d6fe2911bf0691f6faaec3db760752c8ba2dc9",
+        "path": "skills/holochain",
+        "url": "https://github.com/Soushi888/holochain-agent-skills/tree/e2d6fe2911bf0691f6faaec3db760752c8ba2dc9/skills/holochain"
       },
-      "size_chars": 8814,
+      "size_chars": 18102,
       "runs_programs": false,
       "listed_by": "flowsta",
       "listed_at": "2026-08-27",
