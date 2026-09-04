@@ -12,6 +12,27 @@
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { checkManifest, packDigest, recipeDigest, verifySignature, sha256Hex, MAX_PACK_BYTES, MAX_SKILL_ZIP_BYTES, TOOL_LAUNCHERS } from "./lib.mjs";
+import { readProof, proofLocation, normalizeUsername } from "./claim.mjs";
+
+// A claimed listing must still carry its proof at the pinned source: the
+// `flowsta: <username>` line (or `.flowsta` file) that only the maker could
+// have committed. Checked online; when GitHub is unreachable the claim is
+// reported, not failed (the network is not the listing's fault).
+async function checkClaim(dir, m, fail) {
+  if (!m.claimed) return;
+  // A claim signed with the maker's key (the app's Share path) carries its
+  // proof in the signature; the repository proof is for listings claimed
+  // from their source.
+  if (m.maker?.agent_pub_key || m.signature) return;
+  const where = proofLocation(m);
+  if (!where) { fail(dir, "claimed, but the source is not a GitHub repository"); return; }
+  const handle = normalizeUsername(m.maker?.handle);
+  if (!handle) { fail(dir, "claimed, but maker.handle is empty"); return; }
+  let proof;
+  try { proof = await readProof(where.repo, where.ref, where.path); } catch (e) { console.log(`note ${dir}: could not read the claim proof (${e.message})`); return; }
+  if (!proof) fail(dir, `claimed by @${handle}, but the source carries no flowsta: line or .flowsta file`);
+  else if (proof !== handle) fail(dir, `claimed by @${handle}, but the source names @${proof}`);
+}
 
 const root = process.cwd();
 const targets = process.argv.slice(2);
@@ -124,6 +145,7 @@ for (const dir of dirs) {
     }
     if (m.runs_programs !== true) fail(dir, "a tool runs programs by definition - runs_programs must be true");
   }
+  await checkClaim(dir, m, fail);
   if (!failures) console.log(`ok   ${dir}`);
 }
 console.log(failures ? `\n${failures} failure(s)` : `\nall ${dirs.length} listing(s) verified`);

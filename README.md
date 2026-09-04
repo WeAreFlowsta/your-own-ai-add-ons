@@ -35,3 +35,19 @@ their makers can claim them with a signature at any time.
 
 A listing is text and data. Installing one never runs anything; the app says so
 when a skill ships programs.
+
+## Claiming a listing
+
+Some skills and tools here were listed by Flowsta from a public source,
+with the maker's name as it appears on the repository. If one is yours,
+claim it: add `flowsta: <your-username>` to the front matter of your
+SKILL.md (or a `.flowsta` file at the repository root holding just the
+username), and push. Only someone with commit rights can do that, which is
+what makes it proof. The sync workflow (`scripts/sync.mjs`, every six
+hours) reads the proof, checks the username resolves to a Flowsta
+profile, and opens the pull request that marks the listing claimed under
+your username. From then on the listing follows your repository: a new
+commit that still carries the line is pinned, verified, reviewed and
+merged on its own (`scripts/merge-policy.mjs` treats the proof in your
+repository as your signature). Remove the line and it stops following.
+

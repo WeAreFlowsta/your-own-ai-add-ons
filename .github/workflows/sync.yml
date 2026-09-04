@@ -1,0 +1,24 @@
+name: Sync claimed listings
+# Claimed listings follow their maker's repository; listings whose source
+# now names a Flowsta username get claimed. Each change is a pull request
+# that the usual checks and the merge policy handle.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # The bot's token, so the pull requests it opens run the checks
+      # (a workflow's own token opens PRs that trigger nothing).
+      - uses: actions/checkout@v4
+        with: { token: "${{ secrets.ADDONS_GITHUB_TOKEN }}", fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci --omit=dev || npm install --omit=dev
+      - run: node scripts/sync.mjs
+        env: { GH_TOKEN: "${{ secrets.ADDONS_GITHUB_TOKEN }}" }

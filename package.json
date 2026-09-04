@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "verify": "node scripts/verify.mjs",
-    "index": "node scripts/build-index.mjs"
+    "index": "node scripts/build-index.mjs",
+    "sync": "node scripts/sync.mjs"
   },
   "engines": {
     "node": ">=20"
